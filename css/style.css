@@ -522,6 +522,9 @@ width: 200px;
         display: block;
         transition: 1s;
       }
+      .arrow:hover{
+        cursor: pointer;
+      }
       
       .arrow:focus {
         outline: none;
