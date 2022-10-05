@@ -22,6 +22,9 @@ body {
    --header-h2:#FFDBBB;
    --header-btn:#728BAD;
    --input:#D9D9D982;
+   --grey:#999;
+   --gray:#666;
+   --arrow:#A3B8D7;
   }
 
 header {
@@ -302,7 +305,7 @@ width: 205px;
   display:flex;
   place-items:center;
   font-size: 35px;
-  color:white;
+  color:var(--white);
   
 }
 
@@ -406,10 +409,6 @@ footer{
 .location h4{
 width: 200px;
 }
-/* .footer_container logo{
-    display: flex;
-    gap: 50px;
-} */
 .logo p{
     color: var(--white);
     margin-top: 50px;
@@ -437,7 +436,7 @@ width: 200px;
     right:0;
     line-height:45px;
     padding:5px 15px 0px 15px;
-    color:#999;
+    color:var(--grey);
     border:0;
     font-size:1.4em;
     font-weight:bold;
@@ -451,7 +450,7 @@ width: 200px;
     top:60px;
     right:0;
     padding:7px 15px 0px 15px;
-    color:#999;
+    color:var(--grey);
     border:0;
     font-size:3em;
     line-height:65px;
@@ -478,46 +477,25 @@ width: 200px;
         list-style-type: none;
         list-style-image: none;
       }
-      
       .menu li {
         display: block;
         padding: 5px 0 5px 0;
        
       }
-      .menu ul li a {
-        text-decoration: none;
-        margin: 0px;
-        color: #666;
-        
-}
       .menu ul a{
         padding: 0;
         margin: 20px;
       }
       
-      .menu ul li a:hover {
-        color: #666;
-        text-decoration: none;
-      }
-      
       .menu a {
         text-decoration: none;
-        color: #666;
-      }
-      
-      .menu a:hover {
-        text-decoration: none;
-        color: #666;
+        color:var(--gray);
       }
       span {
         padding-left: 20px;
       }
-      
-      a {
-        color: #336699;
-      }
-      .carousel {
-          position: relative;
+        .carousel {
+        position: relative;
         width: 70vw;
         border-radius: 15px;
         margin: 0 auto;
@@ -529,8 +507,6 @@ width: 200px;
         height: 600px;
         margin: 0 auto;
         border-radius: 50px;
-        /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
-        /* display: block; */
       }
       
       .arrow {
@@ -542,7 +518,7 @@ width: 200px;
         font-size: 44px;
         background: none;
         padding: 5px;
-        color: #A3B8D7;
+        color: var(--arrow);
         display: block;
         transition: 1s;
       }
@@ -550,12 +526,6 @@ width: 200px;
       .arrow:focus {
         outline: none;
       }
-      
-      /* .arrow:hover {
-        background: #ccc;
-        cursor: pointer;
-      }
-       */
       .prev {
         left: -50px;
         top: 50%;
@@ -579,8 +549,6 @@ width: 200px;
         padding: 0;
         list-style: none;
         transition: margin-left 500ms;
-        /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
-        /* http://davidwalsh.name/remove-whitespace-inline-block */
         font-size: 0;
       }
       
