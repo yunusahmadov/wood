@@ -13,7 +13,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--body-background);
     overflow-x: hidden;
-
+}
+html{
+    overflow-x: hidden
 }
 :root {
    --body-background:#222021;
@@ -521,6 +523,9 @@ width: 200px;
         color: var(--arrow);
         display: block;
         transition: 1s;
+      }
+      .arrow:hover{
+        cursor: pointer;
       }
       
       .arrow:focus {

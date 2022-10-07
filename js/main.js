@@ -6,44 +6,68 @@ import aboutCard from "./aboutCard.js";
 
 
 
-fetch('../DB/allImages.json')
-    .then(resp => resp.json())
-    .then(data => {
-        data.images1.forEach(imag => {
-            bottomright.innerHTML += solidCard.render(imag)
-        })
-        
-        data.images2.forEach(imag => {
-            trees_container.innerHTML += woodCard.render(imag)
-        })
-        
-        data.images3.forEach(imag => {
-            carT.innerHTML += sliderCard.render(imag)
-        })
-
-        data.images4.forEach(imag => {
-            about.innerHTML += aboutCard.render(imag)
-        })
-    })
-    .then(initCarousel);
-
-// fetch('../DB/images2.json')
+// fetch('../DB/allImages.json')
 //     .then(resp => resp.json())
-//     .then(data1 => {
-//         data1.forEach(imag1 => {
-//             trees_container.innerHTML += woodCard.render(imag1)
+//     .then(data => {
+//         data.images1.forEach(imag => {
+//             bottomright.innerHTML += solidCard.render(imag)
 //         })
-//     })
+        
+//         data.images2.forEach(imag => {
+//             trees_container.innerHTML += woodCard.render(imag)
+//         })
+        
+//         data.images3.forEach(imag => {
+//             carT.innerHTML += sliderCard.render(imag)
+//         })
 
-
-// fetch('../DB/images3.json')
-//     .then(resp => resp.json())
-//     .then(data2 => {
-//         data2.forEach(imag2 => {
-//             carT.innerHTML += sliderCard.render(imag2)
+//         data.images4.forEach(imag => {
+//             about.innerHTML += aboutCard.render(imag)
 //         })
 //     })
 //     .then(initCarousel);
+
+// fetch('../DB/images.json'')
+//     .then(resp => resp.json())
+//     .then(data => {
+//         data.images1.forEach(imag => {
+//             bottomright.innerHTML += solidCard.render(imag)
+//         })
+
+
+
+fetch('../DB/images.json')
+.then(resp => resp.json())
+.then(data => {
+    data.forEach(imag => {
+        bottomright.innerHTML += solidCard.render(imag)
+    })
+})       
+
+fetch('../DB/images2.json')
+    .then(resp => resp.json())
+    .then(data1 => {
+        data1.forEach(imag1 => {
+            trees_container.innerHTML += woodCard.render(imag1)
+        })
+    })
+
+
+fetch('../DB/images3.json')
+    .then(resp => resp.json())
+    .then(data2 => {
+        data2.forEach(imag2 => {
+            carT.innerHTML += sliderCard.render(imag2)
+        })
+    })
+
+    fetch('../DB/images4.json')
+    .then(resp => resp.json())
+    .then(data4 => {
+        data4.forEach(imag4 => {
+            about.innerHTML += aboutCard.render(imag4)
+        })
+    }).then(initCarousel);
 
 // Эвент на изменение dom в carT
 // Если изменился значит появились картинки, занчит нужно инициальзировать карусель
